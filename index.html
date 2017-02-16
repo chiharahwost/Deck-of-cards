@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+</head>
+<body ng-app="cardApp">
+
+
+<div ng-controller="DeckController" class="wrapper">
+    <div class="buttons">
+        <button ng-click="newDeck()" type="button" class="buttons_button">Новая колода</button>
+        <button type="button" class="buttons_button" ng-click="sortDeck()">Разложить</button>
+    </div>
+    <section class="desk">
+        <div class="warning" ng-show="warning">Нажмите "Новая колода" сначала</div>
+        <div class="desk_row desk_row" ng-if="show">
+            <card ng-repeat="card in deck"></card>
+        </div>
+        <div ng-if="sort">
+            <div class="desk_row">
+                <card ng-repeat="card in hearts"></card>
+                <div class="time">{{time.hearts}} мс</div>
+            </div>
+            <div class="desk_row">
+                <card ng-repeat="card in diamonds"></card>
+                <div class="time">{{time.diamonds}} мс</div>
+            </div>
+            <div class="desk_row">
+                <card ng-repeat="card in spades"></card>
+                <div class="time">{{time.spades}} мс</div>
+            </div>
+            <div class="desk_row">
+                <card ng-repeat="card in clubs"></card>
+                <div class="time">{{time.clubs}} мс</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<script src="app/app.js"></script>
+<script src="app/controllers.js"></script>
+<script src="app/services.js"></script>
+<script src="app/directive.js"></script>
+</body>
+</html>

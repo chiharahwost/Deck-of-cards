@@ -1,0 +1,115 @@
+$clr-card: #fff;
+$clr-text: #000;
+
+@import "normalize";
+
+body {
+  background-color: green;
+}
+
+.wrapper {
+  width: 100%;
+  font-size: 16px;
+  padding-top: 3%;
+}
+
+.desk {
+  width: 71%;
+  margin: 2% auto;
+  position: relative;
+  &_row {
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+.buttons {
+  text-align: center;
+  @extend .desk_row;
+  &_button {
+    width: 20%;
+    padding: 0.5em 0;
+    background-color: $clr-card;
+    font-size: 1.1em;
+    border-radius: 0.2em;
+  }
+}
+
+.card {
+  width: 4.5em;
+  height: 7em;
+  float: left;
+  margin: 1em 0 0 1em;
+  position: relative;
+  background-color: white;
+  background-position: center;
+  background-size: 3em auto;
+  background-repeat: no-repeat;
+  border: 0.1em solid $clr-card;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  box-shadow: rgba(0,0,0, 0.4) -0.1em 0.1em inset;
+
+  .value {
+    position: absolute;
+    top: 5%;
+    right: 8%;
+    font-size: 1em;
+    font-weight: bold;
+
+    &-hearts, &-diamonds {
+      color: red;
+    }
+    &-spades, &-clubs {
+      color: black;
+    }
+  }
+}
+
+.hearts {
+  background-image: url('../img/hearts.png');
+}
+
+.diamonds {
+  background-image: url('../img/diamonds.png');
+}
+
+.spades {
+  background-image: url('../img/spades.png');
+}
+
+.clubs {
+  background-image: url('../img/clubs.png');
+}
+
+.time {
+  position: absolute;
+  top: 45%;
+  right: -10%;
+  width: 3em;
+  background-color: $clr-card;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.warning {
+  background-color: $clr-card;
+  padding: 0.5em;
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.2em;
+  opacity: 0.9;
+  position: absolute;
+  left: 25%;
+  z-index: 1;
+}
+
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove {
+  transition: all linear 0.5s;
+}

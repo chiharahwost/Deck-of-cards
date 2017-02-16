@@ -1,0 +1,129 @@
+html, body {
+  border: 0;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0; }
+
+div, span, object, iframe, img, table, caption, thead, tbody,
+tfoot, tr, tr, td, article, aside, canvas, details, figure, menu,
+nav, footer, header, section, summary, mark, audio, video {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, code,
+del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
+ol, ul, li, fieldset, legend, label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, canvas, figure, figure img, figcaption,
+footer, header, nav, section, audio, video {
+  display: block; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+  table caption, table th, table td {
+    text-align: left;
+    vertical-align: middle; }
+
+a img {
+  border: 0; }
+
+:focus {
+  outline: 0; }
+
+body {
+  background-color: green; }
+
+.wrapper {
+  width: 100%;
+  font-size: 16px;
+  padding-top: 3%; }
+
+.desk {
+  width: 71%;
+  margin: 2% auto;
+  position: relative; }
+  .desk_row, .buttons {
+    position: relative; }
+    .desk_row:after, .buttons:after {
+      content: '';
+      display: block;
+      clear: both; }
+
+.buttons {
+  text-align: center; }
+  .buttons_button {
+    width: 20%;
+    padding: 0.5em 0;
+    background-color: #fff;
+    font-size: 1.1em;
+    border-radius: 0.2em; }
+
+.card {
+  width: 4.5em;
+  height: 7em;
+  float: left;
+  margin: 1em 0 0 1em;
+  position: relative;
+  background-color: white;
+  background-position: center;
+  background-size: 3em auto;
+  background-repeat: no-repeat;
+  border: 0.1em solid #fff;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.4) -0.1em 0.1em inset; }
+  .card .value {
+    position: absolute;
+    top: 5%;
+    right: 8%;
+    font-size: 1em;
+    font-weight: bold; }
+    .card .value-hearts, .card .value-diamonds {
+      color: red; }
+    .card .value-spades, .card .value-clubs {
+      color: black; }
+
+.hearts {
+  background-image: url("../img/hearts.png"); }
+
+.diamonds {
+  background-image: url("../img/diamonds.png"); }
+
+.spades {
+  background-image: url("../img/spades.png"); }
+
+.clubs {
+  background-image: url("../img/clubs.png"); }
+
+.time {
+  position: absolute;
+  top: 45%;
+  right: -10%;
+  width: 3em;
+  background-color: #fff;
+  padding: 0.5em;
+  text-align: center; }
+
+.warning {
+  background-color: #fff;
+  padding: 0.5em;
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.2em;
+  opacity: 0.9;
+  position: absolute;
+  left: 25%;
+  z-index: 1; }
+
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove {
+  transition: all linear 0.5s; }
+
